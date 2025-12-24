@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-12-22)
+## Unreleased (2025-12-24)
 
 <section class="features">
 
@@ -23,6 +23,9 @@
 
 <details>
 
+-   [`c216219`](https://github.com/stdlib-js/stdlib/commit/c2162190116f0953296c56c41b7480c8c050ab7e) - **docs:** fix JSDoc parameter type in `stats/base/ztest/one-sample/results` constructors _(by Philipp Burckhardt)_
+-   [`59455b6`](https://github.com/stdlib-js/stdlib/commit/59455b661612d4c4ed47c25d3077884b985742fc) - **docs:** add `toString`, `toJSON`, and `toDataView` declarations to Z-test results packages _(by Philipp Burckhardt)_
+-   [`0a437aa`](https://github.com/stdlib-js/stdlib/commit/0a437aad60abb626a22840c9bad66414b627749f) - **chore:** remove usage of unsupported option _(by Philipp Burckhardt)_
 -   [`61046bb`](https://github.com/stdlib-js/stdlib/commit/61046bb1c95923825493592bf78808fa1b18abc5) - **test:** add missing TypeScript declaration tests _(by Philipp Burckhardt)_
 -   [`4b3f6b6`](https://github.com/stdlib-js/stdlib/commit/4b3f6b66882ec35af639463719e8e2fd57bd4d10) - **docs:** fix missing periods _(by Athan Reines)_
 -   [`d98b085`](https://github.com/stdlib-js/stdlib/commit/d98b0852c489759cc99f6d14e4ae1dab31df0a82) - **test:** add tests for static methods _(by Athan Reines)_
