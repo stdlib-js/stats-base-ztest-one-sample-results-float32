@@ -39,7 +39,7 @@
   },
   "dependencies": {
     "@stdlib/stats-base-ztest-one-sample-results-factory": "github:stdlib-js/stats-base-ztest-one-sample-results-factory#main",
-    "@stdlib/utils-library-manifest": "^0.2.2"
+    "@stdlib/utils-library-manifest": "^0.2.3"
   },
   "devDependencies": {
     "@stdlib/array-buffer": "^0.2.2",
@@ -83,7 +83,6 @@
     "ctor",
     "results"
   ],
-  "__stdlib__": {},
   "funding": {
     "type": "opencollective",
     "url": "https://opencollective.com/stdlib"
