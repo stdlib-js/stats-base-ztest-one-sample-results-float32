@@ -38,7 +38,7 @@
     "url": "https://github.com/stdlib-js/stdlib/issues"
   },
   "dependencies": {
-    "@stdlib/stats-base-ztest-one-sample-results-factory": "github:stdlib-js/stats-base-ztest-one-sample-results-factory#main",
+    "@stdlib/stats-base-ztest-one-sample-results-factory": "^0.1.0",
     "@stdlib/utils-library-manifest": "^0.2.3"
   },
   "devDependencies": {
