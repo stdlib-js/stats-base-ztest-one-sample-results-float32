@@ -45,32 +45,38 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/stats-base-ztest-one-sample-results-float32
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
--   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
+To use in Observable,
+
 ```javascript
-var Float32Results = require( '@stdlib/stats-base-ztest-one-sample-results-float32' );
+Float32Results = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-ztest-one-sample-results-float32@umd/browser.js' )
+```
+
+To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
+
+```javascript
+var Float32Results = require( 'path/to/vendor/umd/stats-base-ztest-one-sample-results-float32/index.js' )
+```
+
+To include the bundle in a webpage,
+
+```html
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-ztest-one-sample-results-float32@umd/browser.js"></script>
+```
+
+If no recognized module system is present, access bundle contents via the global scope:
+
+```html
+<script type="text/javascript">
+(function () {
+    window.Float32Results;
+})();
+</script>
 ```
 
 #### Float32Results( \[arg\[, byteOffset\[, byteLength]]] )
@@ -300,9 +306,14 @@ var v = results.toDataView();
 
 <!-- eslint no-undef: "error" -->
 
-```javascript
-var Float32Array = require( '@stdlib/array-float32' );
-var Results = require( '@stdlib/stats-base-ztest-one-sample-results-float32' );
+```html
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-float32@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-ztest-one-sample-results-float32@umd/browser.js"></script>
+<script type="text/javascript">
+(function () {
 
 var results = new Results({
     'rejected': true,
@@ -317,6 +328,11 @@ var results = new Results({
 
 var str = results.toString();
 console.log( str );
+
+})();
+</script>
+</body>
+</html>
 ```
 
 </section>
@@ -325,88 +341,7 @@ console.log( str );
 
 <!-- C interface documentation. -->
 
-* * *
 
-<section class="c">
-
-## C APIs
-
-<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
-
-<section class="intro">
-
-</section>
-
-<!-- /.intro -->
-
-<!-- C usage documentation. -->
-
-<section class="usage">
-
-### Usage
-
-```c
-#include "stdlib/stats/base/ztest/one-sample/results/float32.h"
-```
-
-#### stdlib_stats_ztest_one_sample_float32_results
-
-Structure for holding single-precision floating-point test results.
-
-```c
-#include <stdbool.h>
-#include <stdint.h>
-
-struct stdlib_stats_ztest_one_sample_float32_results {
-    // Boolean indicating whether the null hypothesis was rejected:
-    bool rejected;
-
-    // Alternative hypothesis:
-    int8_t alternative;
-
-    // Significance level:
-    float alpha;
-
-    // p-value:
-    float pValue;
-
-    // Test statistic:
-    float statistic;
-
-    // Confidence interval:
-    float ci[ 2 ];
-
-    // Mean value under the null hypothesis:
-    float nullValue;
-
-    // Standard error of the mean:
-    float sd;
-};
-```
-
-</section>
-
-<!-- /.usage -->
-
-<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
-
-<section class="notes">
-
-</section>
-
-<!-- /.notes -->
-
-<!-- C API usage examples. -->
-
-<section class="examples">
-
-</section>
-
-<!-- /.examples -->
-
-</section>
-
-<!-- /.c -->
 
 <!-- Section to include cited references. If references are included, add a horizontal rule *before* the section. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
 
@@ -496,13 +431,13 @@ Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/stats-base-ztest-one-sample-results-float32/main/LICENSE
 
-[@stdlib/dstructs/struct]: https://github.com/stdlib-js/dstructs-struct
+[@stdlib/dstructs/struct]: https://github.com/stdlib-js/dstructs-struct/tree/umd
 
-[@stdlib/array/dataview]: https://github.com/stdlib-js/array-dataview
+[@stdlib/array/dataview]: https://github.com/stdlib-js/array-dataview/tree/umd
 
-[@stdlib/array/float32]: https://github.com/stdlib-js/array-float32
+[@stdlib/array/float32]: https://github.com/stdlib-js/array-float32/tree/umd
 
-[@stdlib/array/buffer]: https://github.com/stdlib-js/array-buffer
+[@stdlib/array/buffer]: https://github.com/stdlib-js/array-buffer/tree/umd
 
 </section>
 
